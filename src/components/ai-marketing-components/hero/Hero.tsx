@@ -47,9 +47,9 @@ const HeroSection: React.FC = () => {
                   Successfully <br /> <span>AI audience</span>
                 </p>
                 <div className="xb-item--audience ul_li">
-                  <img src={((audience1 as any) as any).src || ((audience1 as any) as any)} alt="Audience 1" />
-                  <img src={((audience2 as any) as any).src || ((audience2 as any) as any)} alt="Audience 2" />
-                  <img src={((audience3 as any) as any).src || ((audience3 as any) as any)} alt="Audience 3" />
+                  <img src={((audience1 as any) as any).src || ((audience1 as any) as any)} alt="Audience 1" style={{ borderRadius: "50%", objectFit: "cover", width: "98px", height: "98px", border: "2px solid #fff" }} />
+                  <img src={((audience2 as any) as any).src || ((audience2 as any) as any)} alt="Audience 2" style={{ borderRadius: "50%", objectFit: "cover", width: "98px", height: "98px", border: "2px solid #fff", marginLeft: "-15px" }} />
+                  <img src={((audience3 as any) as any).src || ((audience3 as any) as any)} alt="Audience 3" style={{ borderRadius: "50%", objectFit: "cover", width: "98px", height: "98px", border: "2px solid #fff", marginLeft: "-15px" }} />
                 </div>
               </div>
 

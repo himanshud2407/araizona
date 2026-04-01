@@ -59,9 +59,9 @@ const Header: React.FC = () => {
         <div className="container mxw-1650">
           <div className="header__wrap ul_li_between">
             {/* Logo */}
-            <div className="xb-header-logo">
+            <div className="xb-header-logo" style={{ maxWidth: "160px" }}>
               <Link href="/" className="logo1" onClick={handleClick}>
-                <img src={logo.src} alt="Araizona Logo" />
+                <img src={logo.src} alt="Araizona Logo" style={{ width: "100%", height: "auto" }} />
               </Link>
             </div>
 
@@ -113,23 +113,7 @@ const Header: React.FC = () => {
                     <MegaMenuServices />
                   </li>
 
-                  <li className="menu-item-has-children">
-                    <Link href="/blog" onClick={handleClick}>
-                      <span>Blog</span>
-                    </Link>
-                    <ul className="submenu">
-                      <li>
-                        <Link href="/blog" onClick={handleClick}>
-                          <span>Blog</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/blog-details" onClick={handleClick}>
-                          <span>Blog Details</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+
 
                   <li>
                     <Link href="/contact" onClick={handleClick}>
@@ -140,8 +124,8 @@ const Header: React.FC = () => {
               </nav>
             </div>
 
-            {/* Button */}
-            <div className="header-btn" style={{ display: "flex", alignContent: "center", gap: "15px" }}>
+            {/* Button - Hidden on Mobile */}
+            <div className="header-btn d-none d-lg-flex" style={{ alignContent: "center", gap: "15px" }}>
               <Link href="https://team.simplesphere.in/" target="_blank" rel="noopener noreferrer" className="thm-btn" onClick={handleClick}>
                 Employee Login
               </Link>
@@ -151,12 +135,13 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Toggle */}
-            <div className="header-bar-mobile side-menu d-lg-none">
+            <div className="header-bar-mobile side-menu d-lg-none" style={{ marginLeft: "auto", display: 'flex', alignItems: 'center' }}>
               <button
                 className="xb-nav-mobile"
                 onClick={() => setMobileActive(!mobileActive)}
+                style={{ color: "#fff", background: "transparent", fontSize: "24px", border: "1px solid rgba(255,255,255,0.2)", padding: "5px 10px", borderRadius: "4px" }}
               >
-                <i className="far fa-bars"></i>
+                <i className="fas fa-bars"></i>
               </button>
             </div>
           </div>
@@ -193,6 +178,15 @@ const Header: React.FC = () => {
                 <nav className="xb-header-nav">
                   <MobileMenu />
                 </nav>
+
+                <div className="xb-header-mobile-buttons xb-hide-xl mt-30" style={{ display: 'flex', flexDirection: 'column', gap: '15px', padding: '0 20px', marginBottom: '30px' }}>
+                  <Link href="https://team.simplesphere.in/" target="_blank" rel="noopener noreferrer" className="thm-btn" onClick={() => setMobileActive(false)} style={{ textAlign: 'center', width: '100%', fontSize: '15px', padding: '14px 20px', backgroundColor: 'var(--color-primary)', color: '#fff', border: 'none', borderRadius: '50px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Employee Login
+                  </Link>
+                  <Link href="/contact" className="thm-btn" onClick={() => setMobileActive(false)} style={{ textAlign: 'center', width: '100%', fontSize: '15px', padding: '14px 20px', backgroundColor: 'var(--color-primary)', color: '#fff', border: 'none', borderRadius: '50px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Get a Quote
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="xb-header-menu-backdrop"></div>

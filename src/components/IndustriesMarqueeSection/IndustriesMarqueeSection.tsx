@@ -15,7 +15,7 @@ const IndustriesMarqueeSection: React.FC = () => {
   ];
 
   return (
-    <section className="industries pos-rel pt-145 pb-50 bg_img">
+    <section className="industries pos-rel pt-40 pb-50 bg_img">
       <div className="container">
         <div className="sec-title sec-title-center text-center mb-40">
           <span className="sub-title mb-15">Professional & Trust-Building</span>

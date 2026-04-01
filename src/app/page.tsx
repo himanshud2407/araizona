@@ -9,7 +9,7 @@ import IndustriesMarqueeSection from "../components/IndustriesMarqueeSection/Ind
 import IndustriesSection from "../components/Industries/Industries";
 import ContactSection from "../components/ContactSection/ContactSection";
 import TestimonialSection from "../components/Testimonial/Testimonial";
-import BlogSection from "../components/BlogSection/BlogSection";
+
 import Footer from "../components/footer/Footer";
 import Scrollbar from "../components/scrollbar/scrollbar";
 
@@ -29,7 +29,7 @@ export default function HomePage() {
                         <IndustriesSection />
                         <ContactSection />
                         <TestimonialSection />
-                        <BlogSection />
+
                     </main>
                     <Footer />
                     <Scrollbar />

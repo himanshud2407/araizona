@@ -299,6 +299,15 @@ const HeaderThree: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
+
+                <div className="xb-header-mobile-buttons xb-hide-xl mt-30" style={{ display: 'flex', flexDirection: 'column', gap: '15px', padding: '0 20px', marginBottom: '30px' }}>
+                  <Link href="https://team.simplesphere.in/" target="_blank" rel="noopener noreferrer" className="thm-btn chatbot-btn" onClick={() => setMenuOpen(false)} style={{ textAlign: 'center', width: '100%', fontSize: '15px', padding: '14px 20px', backgroundColor: 'var(--color-primary)', color: '#fff', border: 'none', borderRadius: '50px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Employee Login
+                  </Link>
+                  <Link href="/contact" className="thm-btn chatbot-btn" onClick={() => setMenuOpen(false)} style={{ textAlign: 'center', width: '100%', fontSize: '15px', padding: '14px 20px', backgroundColor: 'var(--color-primary)', color: '#fff', border: 'none', borderRadius: '50px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Get a Quote
+                  </Link>
+                </div>
               </div>
             </div>
 

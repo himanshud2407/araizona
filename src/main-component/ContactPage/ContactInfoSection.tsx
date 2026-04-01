@@ -14,7 +14,7 @@ import Link from "next/link";
 const contactData = [
   {
     location: "Pune, Maharashtra, India",
-    phone: "+91 93220 51181 / +91 93595 58110",
+    phone: "+91 93220 51181 ",
     email: "contact@araizona.com",
     img: img01,
   },
@@ -53,8 +53,8 @@ const ContactInfoSection: React.FC = () => {
                   {/* Content */}
                   <div className="xb-item--holder">
                     <p className="xb-item--location">{item.location}</p>
-                    <span className="xb-item--contact_info">{item.phone}</span>
-                    <span className="xb-item--contact_info">{item.email}</span>
+                    <span className="xb-item--contact_info">{item.phone}</span><br></br>
+                    <span className="xb-item--contact_info">{item.email}</span><br></br>
 
                     <Link href="/contact" className="thm-btn form-btn mt-45">
                       VIEW LOCATION

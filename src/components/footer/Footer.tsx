@@ -152,12 +152,7 @@ const Footer: React.FC = () => {
               <Link href="/project">Our Products</Link>
             </h2>
           </div>
-          <div className="xb-footer-nav-item">
-            <span className="sub-title">News?</span>
-            <h2 className="title">
-              <Link href="/blog">News</Link>
-            </h2>
-          </div>
+
         </div>
 
         {/* Social Media Section */}
