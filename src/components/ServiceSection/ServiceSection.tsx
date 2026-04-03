@@ -257,7 +257,6 @@ const ServiceSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="service-vertical-text">
                 <h3 className="xb-item--title">
                   <Link href={service.link}>{service.title}</Link>

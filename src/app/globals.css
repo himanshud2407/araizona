@@ -3,3 +3,46 @@
 @import "swiper/css";
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Fix mobile gap and align content */
+.container, .container-fluid {
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .sec-title, .footer-heading, .xb-footer-heading, .xb-footer-nav, .xb-footer-bottom {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .blog-section .sec-title, .blog-section .row {
+    text-align: center !important;
+  }
+  
+  .xb-footer-nav-item {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  /* Center blog cards on mobile */
+  .blog-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ensure footer title 'Araizona' is centered on mobile */
+.xb-footer-heading .title {
+    width: 100%;
+    text-align: center;
+}

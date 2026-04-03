@@ -113,7 +113,11 @@ const Header: React.FC = () => {
                     <MegaMenuServices />
                   </li>
 
-
+                  <li>
+                    <Link href="/blog" onClick={handleClick}>
+                      <span>Blog</span>
+                    </Link>
+                  </li>
 
                   <li>
                     <Link href="/contact" onClick={handleClick}>

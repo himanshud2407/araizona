@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
     >
       <div className="xb-footer-wrap">
         {/* Footer Heading */}
-        <div className="xb-footer-heading wow zoomIn" data-wow-delay="0ms" data-wow-duration="600ms">
+        <div className="xb-footer-heading wow zoomIn text-center" data-wow-delay="0ms" data-wow-duration="600ms">
           <h1 className="title">Araizona</h1>
           <a className="mail" href="mailto:contact@araizona.com">
             <img src={(emailIcon as any).src || emailIcon} alt="email" /> contact@araizona.com
@@ -128,25 +128,25 @@ const Footer: React.FC = () => {
 
         {/* Footer Navigation */}
         <div className="xb-footer-nav">
-          <div className="xb-footer-nav-item">
+          <div className="xb-footer-nav-item text-center">
             <span className="sub-title">What we do?</span>
             <h2 className="title">
               <Link href="/products">Products</Link>
             </h2>
           </div>
-          <div className="xb-footer-nav-item">
+          <div className="xb-footer-nav-item text-center">
             <span className="sub-title">Who we are?</span>
             <h2 className="title">
               <Link href="/about">About Araizona SimpleSphere</Link>
             </h2>
           </div>
-          <div className="xb-footer-nav-item">
+          <div className="xb-footer-nav-item text-center">
             <span className="sub-title">How we deliver</span>
             <h2 className="title">
               <Link href="/contact">Contact us</Link>
             </h2>
           </div>
-          <div className="xb-footer-nav-item">
+          <div className="xb-footer-nav-item text-center">
             <span className="sub-title">What we're good at?</span>
             <h2 className="title">
               <Link href="/project">Our Products</Link>

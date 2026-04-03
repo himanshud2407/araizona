@@ -12,6 +12,7 @@ import TestimonialSection from "../components/Testimonial/Testimonial";
 
 import Footer from "../components/footer/Footer";
 import Scrollbar from "../components/scrollbar/scrollbar";
+import BlogHighlight from "../components/blog/BlogHighlight";
 
 export default function HomePage() {
     return (
@@ -27,6 +28,7 @@ export default function HomePage() {
                         <ProjectSection />
                         <IndustriesMarqueeSection />
                         <IndustriesSection />
+                        <BlogHighlight limit={3} />
                         <ContactSection />
                         <TestimonialSection />
 
