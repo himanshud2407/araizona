@@ -26,3 +26,6 @@ yarn-error.log*
 build_output*.txt
 website-content.md
 .next
+
+# agents
+/.agents

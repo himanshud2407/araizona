@@ -249,11 +249,9 @@ const ServiceSection: React.FC = () => {
                 <p className="xb-item--content">{service.desc}</p>
                 <div className="img-hove-effect">
                   <div className="xb-item--img xb-img">
-                    {[...Array(4)].map((_, i) => (
-                      <Link href={service.link} key={i}>
-                        <img src={(service.img as any).src || (service.img as any)} alt={service.title} />
-                      </Link>
-                    ))}
+                    <Link href={service.link}>
+                      <img src={(service.img as any).src || (service.img as any)} alt={service.title} />
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,8 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { getAllJobSlugs } from '@/api/career';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://araizona.com'
+  const baseUrl = 'https://araizona.com';
 
   const routes = [
     '',
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-chatbot',
     '/ai-marketing',
     '/career',
+    '/career-details',
     '/contact',
     '/project',
     '/service',
@@ -18,7 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: route === '' ? 1 : 0.8,
-  }))
+  }));
 
-  return [...routes]
+  const jobRoutes = getAllJobSlugs().map((slug) => ({
+    url: `${baseUrl}/career/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  return [...routes, ...jobRoutes];
 }

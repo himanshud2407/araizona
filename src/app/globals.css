@@ -46,3 +46,44 @@ html, body {
     width: 100%;
     text-align: center;
 }
+
+/* ========================================================
+   Remove Spiral / Concentric Slicing Hover Effect Website-wide
+   ======================================================== */
+.img-hove-effect .xb-img {
+  overflow: hidden !important;
+  position: relative !important;
+  border-radius: 12px;
+}
+
+/* Hide any duplicate stacked concentric sliced children */
+.img-hove-effect .xb-img a:nth-child(n+2) {
+  display: none !important;
+}
+
+.img-hove-effect .xb-img a {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+.img-hove-effect .xb-img a img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s ease !important;
+}
+
+.img-hove-effect:hover .xb-img a img {
+  transform: scale(1.05) !important;
+}
+
+.img-hove-effect:hover .xb-img a:nth-child(2),
+.img-hove-effect:hover .xb-img a:nth-child(3),
+.img-hove-effect:hover .xb-img a:nth-child(4) {
+  transform: none !important;
+}
+

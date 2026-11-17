@@ -103,11 +103,9 @@ const ProjectSection: React.FC = () => {
                   {/* IMAGES */}
                   <div className="xb-project-img img-hove-effect">
                     <div className="xb-img">
-                      {item.images.map((img, i) => (
-                        <Link href="/project-details" key={i}>
-                          <img src={(img as any).src || (img as any)} alt="project" />
-                        </Link>
-                      ))}
+                      <Link href="/project-details">
+                        <img src={(item.images[0] as any).src || (item.images[0] as any)} alt="project" />
+                      </Link>
                     </div>
                   </div>
                 </>
@@ -116,11 +114,9 @@ const ProjectSection: React.FC = () => {
                   {/* REVERSED: IMAGE FIRST */}
                   <div className="xb-project-img img-hove-effect">
                     <div className="xb-img">
-                      {item.images.map((img, i) => (
-                        <Link href="/project-details" key={i}>
-                          <img src={(img as any).src || (img as any)} alt="project" />
-                        </Link>
-                      ))}
+                      <Link href="/project-details">
+                        <img src={(item.images[0] as any).src || (item.images[0] as any)} alt="project" />
+                      </Link>
                     </div>
                   </div>
 

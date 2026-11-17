@@ -42,11 +42,8 @@ const ContactInfoSection: React.FC = () => {
               <div className="xb-contact-items img-hove-effect xb-border">
                 <div className="xb-item--inner">
 
-                  {/* Multiple hover images */}
+                  {/* Image */}
                   <div className="xb-img">
-                    <Link href="/contact"><img src={(item.img as any).src || item.img} alt="location" /></Link>
-                    <Link href="/contact"><img src={(item.img as any).src || item.img} alt="location" /></Link>
-                    <Link href="/contact"><img src={(item.img as any).src || item.img} alt="location" /></Link>
                     <Link href="/contact"><img src={(item.img as any).src || item.img} alt="location" /></Link>
                   </div>
 

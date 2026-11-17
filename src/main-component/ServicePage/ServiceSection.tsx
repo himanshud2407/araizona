@@ -147,11 +147,9 @@ const ServiceSection: React.FC = () => {
                   <p className="xb-item--content">{service.content}</p>
 
                   <div className="xb-item--img xb-img">
-                    {service.images.map((img, i) => (
-                      <Link key={i} href={service.link}>
-                        <img src={(img as any).src || (img as any)} alt="product" />
-                      </Link>
-                    ))}
+                    <Link href={service.link}>
+                      <img src={(service.images[0] as any).src || (service.images[0] as any)} alt="product" />
+                    </Link>
                   </div>
                 </div>
               </div>

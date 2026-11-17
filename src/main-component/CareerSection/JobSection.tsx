@@ -1,53 +1,37 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
+import { jobs } from "@/api/career";
 
 // Images
 import jobBg from "../../images/bg/job-bg.png";
 import diamondIcon from "../../images/icon/diamond-icon02.gif";
-
 import locIcon from "../../images/icon/location-icon02.svg";
 import clockIcon from "../../images/icon/clock-icon.svg";
-import Link from "next/link";
 
-// JOB DATA
-const jobs = [
-  {
-    id: 1,
-    title: "Machine learning engineer.",
-    category: ["cat2", "cat4"],
-    location: "Remote, (USA)",
-    type: "Full time",
-  },
-  {
-    id: 2,
-    title: "NLP (natural language processing) engineer.",
-    category: ["cat1", "cat2"],
-    location: "In House, (USA)",
-    type: "Full time",
-  },
-  {
-    id: 3,
-    title: "Technical project manager (AI).",
-    category: ["cat1", "cat3"],
-    location: "Remote, (USA)",
-    type: "Full time",
-  },
-  {
-    id: 4,
-    title: "Conversational UX designer.",
-    category: ["cat3", "cat4"],
-    location: "Remote, (USA)",
-    type: "Full time",
-  },
-  {
-    id: 5,
-    title: "HR & talent manager (AI Sector).",
-    category: ["cat4", "cat1"],
-    location: "Remote, (USA)",
-    type: "Full time",
-  },
-];
+const arrowIcon = (
+  <>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <rect x="5.065" y="19.978" width="20.571" height="2.612" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+      <rect x="7.97" y="7.244" width="2.612" height="2.612" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+      <rect x="11.65" y="7.548" width="2.612" height="2.612" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+      <rect x="15.334" y="7.852" width="2.612" height="2.612" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+      <rect x="18.711" y="11.837" width="2.612" height="2.612" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+      <rect x="18.408" y="15.52" width="2.612" height="2.612" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+      <rect x="18.104" y="19.201" width="2.612" height="2.612" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+    </svg>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <rect x="5.065" y="19.978" width="20.571" height="2.612" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+      <rect x="7.97" y="7.244" width="2.612" height="2.612" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+      <rect x="11.65" y="7.548" width="2.612" height="2.612" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+      <rect x="15.334" y="7.852" width="2.612" height="2.612" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+      <rect x="18.711" y="11.837" width="2.612" height="2.612" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+      <rect x="18.408" y="15.52" width="2.612" height="2.612" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+      <rect x="18.104" y="19.201" width="2.612" height="2.612" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+    </svg>
+  </>
+);
 
 const filters = [
   { label: "View all", value: "*" },
@@ -59,7 +43,7 @@ const filters = [
 
 const JobSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState("*");
-  const itemsRef = useRef<HTMLDivElement[]>([]);
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   // Filtering + animation
   useEffect(() => {
@@ -90,11 +74,11 @@ const JobSection: React.FC = () => {
 
   return (
     <section
+      id="open-positions"
       className="job_section pt-90 pb-150 bg_img"
       style={{ backgroundImage: `url(${(jobBg as any).src || jobBg})` }}
     >
       <div className="container">
-
         {/* TITLE */}
         <div className="sec-title sec-title-center fea-sec-title text-center mb-40">
           <span className="sub-title">Open Positions</span>
@@ -102,7 +86,7 @@ const JobSection: React.FC = () => {
             Be part of{" "}
             <span>
               <img src={(diamondIcon as any).src || (diamondIcon as any)} alt="icon" />
-            </span>
+            </span>{" "}
             the team
           </h2>
         </div>
@@ -128,15 +112,28 @@ const JobSection: React.FC = () => {
             <div
               key={job.id}
               ref={(el) => {
-                if (el) itemsRef.current[i] = el;
+                itemsRef.current[i] = el;
               }}
               className="xb-career-item grid-item xb-border"
               data-category={job.category.join(" ")}
-              style={{ opacity: 1 }} // default visible
+              style={{ opacity: 1 }}
             >
               <div className="xb-item--content">
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--color-primary, #FF3D3D)",
+                    marginBottom: "6px",
+                  }}
+                >
+                  {job.department}
+                </span>
                 <h2 className="xb-item--title">
-                  <Link href="/career-details">{job.title}</Link>
+                  <Link href={`/career/${job.slug}`}>{job.title}</Link>
                 </h2>
 
                 <ul className="xb-item--holder ul_li list-unstyled">
@@ -146,24 +143,24 @@ const JobSection: React.FC = () => {
                   <li>
                     <img src={(clockIcon as any).src || (clockIcon as any)} alt="clock" /> {job.type}
                   </li>
+                  <li style={{ color: "#fff", opacity: 0.85 }}>
+                    Exp: {job.experience}
+                  </li>
                 </ul>
               </div>
 
               {/* BUTTON */}
               <div className="team-btn">
-                <Link className="thm-btn agency-btn" href="/career-details">
+                <Link className="thm-btn agency-btn" href={`/career/${job.slug}`}>
                   <span className="text">view job</span>
                   <span className="arrow">
-                    <span className="arrow-icon">
-                      {/* Your SVG ICON */}
-                    </span>
+                    <span className="arrow-icon">{arrowIcon}</span>
                   </span>
                 </Link>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

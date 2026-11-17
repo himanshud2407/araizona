@@ -45,11 +45,9 @@ const GallerySection: React.FC = () => {
           {careerImages.map((image, index) => (
             <div key={index} className="xb-image-item img-hove-effect">
               <div className="xb-img">
-                {[...Array(4)].map((_, i) => (
-                  <Link key={i} href="/career-details">
-                    <img src={(image as any).src || (image as any)} alt="career" />
-                  </Link>
-                ))}
+                <Link href="#open-positions">
+                  <img src={(image as any).src || (image as any)} alt="career" />
+                </Link>
               </div>
             </div>
           ))}
@@ -57,12 +55,12 @@ const GallerySection: React.FC = () => {
 
         {/* Button */}
         <div className="xb-career-btn text-center">
-          <Link className="thm-btn agency-btn" href="/contact">
-            <span className="text">Begin Today with us</span>
+          <a className="thm-btn agency-btn" href="#open-positions">
+            <span className="text">View Open Positions</span>
             <span className="arrow">
               <span className="arrow-icon">{arrowIcon}</span>
             </span>
-          </Link>
+          </a>
         </div>
 
       </div>

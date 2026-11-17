@@ -8,33 +8,33 @@ const HiringProcess: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "_Send your CV",
+      title: "_Send your CV & Screening",
       content:
-        "Apply for a position by sending us your CV or providing a link to your LinkedIn profile, and take the first step toward joining our team.",
+        "Submit your application, updated resume, and answers to our screening questions directly through our career portal or via email to contact@araizona.com.",
     },
     {
       number: "02",
-      title: "_Initial screening",
+      title: "_Initial Screening",
       content:
-        "Apply for a position by sending us your CV or providing a link to your LinkedIn profile, and take the first step toward joining our team.",
+        "Our engineering and talent team reviews your technical background, code repositories, past projects, and readiness for fast-paced client delivery.",
     },
     {
       number: "03",
-      title: "_Job interview",
+      title: "_Technical Assessment",
       content:
-        "Apply for a position by sending us your CV or providing a link to your LinkedIn profile, and take the first step toward joining our team.",
+        "A practical, real-world coding evaluation or system design challenge focused on clean architecture, API handling, and reliable problem-solving.",
     },
     {
       number: "04",
-      title: "_Test task",
+      title: "_Team & Culture Interview",
       content:
-        "Apply for a position by sending us your CV or providing a link to your LinkedIn profile, and take the first step toward joining our team.",
+        "Meet with our founders and senior engineers to discuss real product challenges, project workflows, team expectations, and mutual fit.",
     },
     {
       number: "05",
-      title: "_You’re hired!",
+      title: "_Offer & Welcome to Araizona!",
       content:
-        "Apply for a position by sending us your CV or providing a link to your LinkedIn profile, and take the first step toward joining our team.",
+        "Receive a competitive offer letter with clear growth milestones, comprehensive benefits, and immediate hands-on onboarding onto live client projects.",
     },
   ];
 
@@ -46,7 +46,6 @@ const HiringProcess: React.FC = () => {
     <section className="hiring-process pt-140 pb-150">
       <div className="container">
         <div className="row mt-none-50 align-items-center">
-          
           {/* LEFT SIDE - TEXT & ACCORDION */}
           <div className="col-lg-6 mt-50">
             <div className="sec-title sec-title-center mb-35">
@@ -56,7 +55,6 @@ const HiringProcess: React.FC = () => {
 
             <div className="xb-faq career-faq">
               <ul className="accordion_box clearfix list-unstyled">
-
                 {steps.map((item, index) => (
                   <li
                     key={index}
@@ -88,7 +86,6 @@ const HiringProcess: React.FC = () => {
                     </div>
                   </li>
                 ))}
-
               </ul>
             </div>
           </div>
@@ -96,10 +93,12 @@ const HiringProcess: React.FC = () => {
           {/* RIGHT SIDE - IMAGE */}
           <div className="col-lg-6 mt-50">
             <div className="process-img">
-              <img src={(processImg as any).src || (processImg as any)} alt="hiring process" />
+              <img
+                src={(processImg as any).src || (processImg as any)}
+                alt="Araizona hiring process"
+              />
             </div>
           </div>
-
         </div>
       </div>
     </section>

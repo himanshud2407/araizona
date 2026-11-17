@@ -30,22 +30,18 @@ const AboutSection: React.FC = () => {
           {/* Column 1 */}
           <div className="img-hove-effect">
             <div className="xb-img">
-              {[img05, img05, img05, img05].map((img, i) => (
-                <Link key={i} href="/about">
-                  <img src={(img as any).src || img} alt="about" />
-                </Link>
-              ))}
+              <Link href="/about">
+                <img src={(img05 as any).src || img05} alt="about" />
+              </Link>
             </div>
           </div>
 
           {/* Column 2 */}
           <div className="img-hove-effect">
             <div className="xb-img">
-              {[img06, img06, img06, img06].map((img, i) => (
-                <Link key={i} href="/about">
-                  <img src={(img as any).src || img} alt="about" />
-                </Link>
-              ))}
+              <Link href="/about">
+                <img src={(img06 as any).src || img06} alt="about" />
+              </Link>
             </div>
           </div>
 
@@ -65,22 +61,18 @@ const AboutSection: React.FC = () => {
           {/* Column 3 */}
           <div className="img-hove-effect">
             <div className="xb-img">
-              {[img07, img07, img07, img07].map((img, i) => (
-                <Link key={i} href="/about">
-                  <img src={(img as any).src || img} alt="about" />
-                </Link>
-              ))}
+              <Link href="/about">
+                <img src={(img07 as any).src || img07} alt="about" />
+              </Link>
             </div>
           </div>
 
           {/* Column 4 */}
           <div className="img-hove-effect">
             <div className="xb-img">
-              {[img08, img08, img08, img08].map((img, i) => (
-                <Link key={i} href="/about">
-                  <img src={(img as any).src || img} alt="about" />
-                </Link>
-              ))}
+              <Link href="/about">
+                <img src={(img08 as any).src || img08} alt="about" />
+              </Link>
             </div>
           </div>
         </div>

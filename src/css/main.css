@@ -14997,50 +14997,22 @@ Drop Down menu end
 .img-hove-effect .xb-img {
   overflow: hidden;
   position: relative;
+  border-radius: 12px;
 }
 
-.img-hove-effect .xb-img a:nth-child(2),
-.img-hove-effect .xb-img a:nth-child(3),
-.img-hove-effect .xb-img a:nth-child(4) {
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-@media (max-width: 991px) {
-
-  .img-hove-effect .xb-img a:nth-child(2),
-  .img-hove-effect .xb-img a:nth-child(3),
-  .img-hove-effect .xb-img a:nth-child(4) {
-    width: 100%;
-  }
+.img-hove-effect .xb-img a:nth-child(n+2) {
+  display: none !important;
 }
 
 .img-hove-effect .xb-img a img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.img-hove-effect:hover .xb-img a:nth-child(2) {
-  transform: scale(0.9);
-}
-
-.img-hove-effect:hover .xb-img a:nth-child(3) {
-  transform: scale(0.7);
-}
-
-.img-hove-effect:hover .xb-img a:nth-child(4) {
-  transform: scale(0.5);
+.img-hove-effect:hover .xb-img a img {
+  transform: scale(1.05);
 }
 
 .tagcloud,
